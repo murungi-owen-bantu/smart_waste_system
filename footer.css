@@ -1,0 +1,29 @@
+.site-footer{
+    background-color: #1e5128;
+    color: white;
+    padding: 40px 80px;
+    margin-top: 80px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.footer-links a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+.footer-links a:hover{
+    color: #a8ff60;
+}
+.footer-right p{
+    font-size: 14px;
+    margin: 5px 0;
+    opacity: 0.8;
+    text-align: right;
+}

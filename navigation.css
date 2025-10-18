@@ -1,0 +1,100 @@
+.navbar{
+    background-color: #1e5128;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgb(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.navbar .logo{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.navbar .logo img{
+    height: 40px;
+    width: auto;
+}
+.navbar .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color:white;
+    letter-spacing: 1px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-links a:hover{
+    color: #a8ff60;
+}
+.btn-signup{
+    background: #a8ff60;
+    color: #1e5128 !important;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.btn-signup:hover{
+    background: #caff90;
+}
+.menu-toggle{
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    margin-left: 10px;
+}
+@media (max-width:600px){
+    .menu-toggle{
+        display: block;
+        margin-left: auto;
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background:rgba(0,0,0,0.3);
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 0 0 10px 10px;
+        transition: all 0.3s ease-in-out;
+        z-index: 999;
+    }
+    .nav-links.active{
+        display: flex;
+        opacity: 1;
+    }
+    .nav-links a{
+        text-align: right;
+        padding: 10px 20px;
+        width: 80%;
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.3s ease,transform 0.3s ease;
+    }
+    .nav-links a:hover{
+        background-color: rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+    }
+}

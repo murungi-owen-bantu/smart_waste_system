@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <script>
+        function toggleMenu(){
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+    <!--navigation bar-->
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/recycle-truck.png" alt="smartwaste logo">
+            <span>SW</span>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+        <nav  class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Recycling Tips</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="signup-btn">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Hero section-->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Keep Our City Clean Together 🌍</h1>
+            <p>Join the movement for a Cleaner and Greener Community.</p>
+            <div class="buttons">
+                <a href="signup.html" class="btn-primary">Sign up</a>
+                <a href="about.html" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/recycle-truck.png" alt="Recycling Truck">
+        </div>
+    </section>
+
+    <!--Recycling Info Section-->
+    <section class="info">
+        <h2>Why Proper Waste Management Matters</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="images/factory.png" alt="pollution">
+                <h3>Reduce Pollution</h3>
+                <p>Proper waste disposal helps reduce air and water pollution.</p>
+            </div>
+            <div class="card">
+                <img src="images/health.png" alt="Health">
+                <h3>Protect Health</h3>
+                <p>Managing waste prevents diseases caused by poor sanitation.</p>
+             </div>
+             <div class="card">
+                <img src="images/garbage-truck.png" alt="Recycling">
+                <h3>Recycle & Reuse</h3>
+                <p>Turn waste into valuable resources through recycling.</p>
+             </div>
+            </div>
+    </section>
+    <section class="info">
+        <h2>How to Recycle Smartly</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="images/recycle-bin.png" alt="Recycle Bin Icon">
+                <h3>Separate plastics,paper,and organic</h3>
+                <p></p>
+            </div>
+            <div class="card">
+                <img src="images/battery-status.png" alt="Battery Icon">
+                <h3>Dispose of batteries safely</h3>
+            </div>
+            <div class="card">
+                <img src="images/leaf.png" alt="Compost Icon">
+                <h3>Compost your biodegradable waste</h3>
+            </div>
+        </div>
+    </section>
+
+    <!--Stats Section-->
+    <section class="stats">
+        <h2>Our Impact so far</h2>
+        <div class="stats-grid">
+            <div class="stat"><span id="users">2,300+</span><p>Active Users</p></div>
+            <div class="stat"><span id="bins">4,500+</span><p>Bins Managed</p></div>
+            <div class="stat"><span id="waste">12,000+</span><p>Tons Collected</p></div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="footer-columns">
+            <div>
+                <h4>Company</h4>
+                <p>About Us</p>
+                <p>Contact</p>
+                <p>Careers</p>
+            </div>
+            <div>
+             <h4>Services</h4>
+             <p>Bin Management</p>
+             <p>Waste Collection</p>
+        </div>
+        <div>
+            <h4>Resources</h4>
+            <p>Recycling Guide</p>
+            <p>Government Standards</p>
+        </div>
+        <div>
+            <h4>Follow Us</h4>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+        </div>
+        <p class="Footer-bottom"> © 2025 Smart Waste Management || All Rights Reserved</p>
+    </footer>
+</body>
+</html>

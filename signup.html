@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Smart waste</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*small form-specific styles*/
+        .auth-card{max-width: 520px;margin: 48px auto;background: #fff;padding:28px;border-radius: 12px;box-shadow: 0 8px 30px rgba(0,0,0,0.06);}
+        label{display: block;font-weight: 600;margin: 8px 0 6px;}
+        input,select{width: 100%;padding: 10px 12px;border-radius: 8px;border:1px solid #e6e6e6;}
+        .actions{display: flex;gap: 12px;margin-top:16px;}
+        .note{color: #6b7280;margin-top: 8px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <h2>Create your account</h2>
+            <p class="note">Sign up as a citizen to report bins,pay collection fees and track collection.</p>
+
+            <form id="signupForm" action="register.php" method="post" autocomplete="off" novalidate>
+
+                <label for="name">Full name</label>
+                <input id="name" name ="name" type="text" required minlength="2">
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" required>
+
+                <label for="phone">Phone(mobile money)</label>
+                <input id="phone" name="phone" type="tel">
+
+                <label for="address">Address</label>
+                <input id="address" name="address" type="text">
+
+                <label for="language">Language</label>
+                <select name="language" id="language">
+                    <option value="en" selected>English</option>
+                    <option value="lg">Luganda</option>
+                    <option value="sw">Swahili</option>
+                </select>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required minlength="8">
+
+                <label for="password_confirm">Confirm password</label>
+                <input id="password_confirm" name="password_confirm" type="password" required minlength="8">
+
+                <div class="actions">
+                    <button type="submit" class="btn-primary">Create account</button>
+                    <a href="login.html" class="btn-secondary" style="align-self: center;padding: 10px 14px;">Already have an account</a>
+
+                </div>
+            </form>
+
+            <div id="msg" style="margin-top: 12px;color: #c53030;"></div>
+        </div>
+    </div>
+
+    <script>
+        //client-side validation for better ux
+        document.getElementById('signupForm').addEventListener('submit',function(e){
+           const pw = document.getElementById('password').value;
+           const pw2 = document.getElementById('password_confirm').value;
+           if(pw!==pw2){
+            e.preventDefault();
+            document.getElementById('msg').textContent = 'Passwords do not match.';
+            return false;
+           } 
+           if(pw.lenth<8){
+            e.preventDefault();
+            document.getElementById('msg').textContent = 'Password must be at least 8 characters.';
+            return false;
+           }
+           //allow form to submit to the server
+        });
+    </script>
+</body>
+</html>

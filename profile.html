@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Profile</title>
+    <link rel="stylesheet" href="profile.css">
+   
+</head>
+<body>
+     <script src="profile.js" defer></script>
+     
+    <header class="top-bar">
+        <div class="logo">
+            <img src="images/recycle-truck.png" alt="smart waste logo">
+            <span>SW</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="recycling-tips.html">Recycling Tips</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="profile-icons">
+            <span class="notifications">🔔</span>
+            <img src="images/user.png" alt="Profile" class="avatar">
+            
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    
+    </header>
+
+    <section class="profile-container">
+        <div class="profile-card">
+            <img src="images/user.png" alt="User Avatar" class="profile-pic">
+            <h2 id="userName">Kizito Aitham</h2>
+            <p>Email: kizitoaitham@gmail.com</p>
+            <button id="editProfileBtn">Edit Profile</button>
+        </div>
+
+        <div class="info-sections">
+            <div class="card">
+                <h3>Green Points</h3>
+                <p><span id="greenPoints">100</span>points🌱</p>
+                <button>Redeem</button>
+            </div>
+
+            <div class="card">
+                <h3>Payment History</h3>
+                <ul id="paymentList">
+                    <li>10/03/2025 - ugx 5,000 - Monthly Collection</li>
+                    <li>08/02/2025 - ugx 5,000 - Monthly Collection</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Waste Reports</h3>
+                <p>You have <strong>2</strong> active waste pickup reports.</p>
+                <button>View Reports</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p><a href="#">Privacy Policy</a> | <a href="#">Contact</a> | <a href="#">Terms</a></p>
+        <p> © 2025 SmartWaste. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>

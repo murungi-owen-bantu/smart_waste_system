@@ -1,0 +1,238 @@
+/*--about page--*/
+.about-hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    background: #e6f4ea;
+    flex-wrap: wrap;
+}
+
+.about-text{
+    flex: 1;
+    min-width: 300px;
+}
+.about-text h1{
+    color: #0a3d20;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.about-text p{
+    color: #2d5a3f;
+    font-size: 1.1rem;
+}
+.about-image img{
+    width: 300px;
+    height: auto;
+}
+.mission{
+    text-align: center;
+    padding: 60px 10%;
+    background: #f0fdf4;
+}
+.mission p{
+    max-width: 800px;
+    margin: 15px auto;
+    color: #333;
+}
+.values{
+    padding: 60px 10%;
+    text-align: center;
+}
+.values-grid{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.value-card{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+.value-card img{
+    width: 60px;
+    margin-bottom: 15px;
+}
+.team{
+    background:#e6f43a;
+    text-align: center;
+    padding: 60px 10%;
+}
+.team-grid{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.team-member img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.contact-cta{
+    background: #0a8a43;
+    color: white;
+    text-align: center;
+    padding: 60px 10%;
+}
+.contact-cta .btn-primary{
+    background: white;
+    color: #0a8a43;
+    font-weight: bold;
+    margin-top: 15px;
+    display: 10px 20px;
+    border-radius: 25px;
+}
+footer{
+    background: #064e2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/*topbar styles*/
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--green);
+    color:green;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.topbar .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.topbar .logo img{
+    height: 40px;
+    width: auto;
+}
+.topbar .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color:green;
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.nav-links a{
+    text-decoration: none;
+    color:green;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.nav-links a:hover{
+    background-color: white;
+}
+.nav-links .btn-primary{
+    background-color: white;
+    color: var(--green);
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: transform 0.3s ease,background-color 0.3s ease;
+}
+.nav-links .btn-primary:hover{
+    background-color: var(--green-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+.menu-toggle{
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    z-index: 1000;
+    margin-left: auto;
+    align-self: center;
+}
+@media (max-width:600px){
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(0,0,0,0.5);
+        width: 100%;
+        padding: 10px  0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 999;
+        border-radius: 0 0 10px 10px;
+        transition: all 0.3s ease-in-out;
+    }
+    .nav-links.active{
+        display: flex;
+        opacity: 1;
+    }
+    .nav-links a{
+        text-align: right;
+        padding: 10px 20px;
+        width: 80%;
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.3s ease,transform 0.3s ease;
+    }
+    .nav-links a:hover{
+        background-color: rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+    }
+     
+.about-hero{
+    flex-direction: column;
+    text-align: center;
+    padding: 8px;
+}
+.about-hero .about-hero img{
+    max-width: 80%;
+    margin-top:  10px;
+    height: 40px;
+    border-radius: 10px;
+}
+.about-hero .about-text h1{
+    font-size: 1.5rem;
+}
+.about-hero .about-text p{
+    font-size: 1rem;
+    padding: 0 20px;
+    line-height: 1.5;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.mission{
+    padding: 15px;
+}
+.team{
+    padding: 15px;
+}
+.contact-cta{
+    padding: 15px;
+}
+.menu-toggle{
+    display: block;
+}
+}
+

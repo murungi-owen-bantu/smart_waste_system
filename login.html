@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Smart Waste</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-card{ max-width: 420px;margin: 80px auto;background: #fff;padding: 24ox; border-radius: 12px;box-shadow: 0 8px 20px rgba(0,0,0,0.05);}
+        label{display: block;margin: 8px 0 6px;font-weight: 600;}
+        input{width: 100%;padding: 10px 12px;border-radius: 8px;border: 1px solid #eaeaea;}
+        .actions{display: flex;gap: 12px;margin-top: 16px;}
+        .note{color: #6b7280;margin-top: 8px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <h2>Welcome back</h2>
+            <p class="note">Log in to manage your bin,payements and track trucks.</p>
+
+            <form id="loginForm" action="login.php" method="post" autocomplete="off">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required>
+
+                <div class="actions">
+                    <button type="submit" class="btn-primary">Log in</button>
+                    <a href="signup.html" class="btn-secondary" style="align-self: center; padding: 10px 14px;">Create account</a>
+
+                </div>
+            </form>
+            
+            <div style="margin-top: 12px;">
+                <a href="#">Forgot password?</a>
+            </div>
+            
+            <div id="msg" style="margin-top: 12px;color: #c53030;"></div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

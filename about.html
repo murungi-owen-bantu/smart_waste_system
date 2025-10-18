@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about.css"/>
+</head>
+<body>
+    <!---top navigation-->
+    <header class="topbar">
+        <div class="logo">
+            <img src="images/recycle-truck.png" alt="Smartwaste Logo">
+            <span>SW</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="recycling.html">recycling Tips</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html" class="btn-primary" >Sign Up</a>
+        </nav>
+    </header>
+
+    <!--about hero section-->
+    <section class="about-hero">
+        <div class="about-text fade-in">
+            <h1>About Smartwaste</h1>
+            <p>
+                we are transforming waste collection into a smarter, cleaner, and more sustainable process for every citizen.
+            </p>
+        </div>
+        <div class="about-image fade-in">
+            <img src="images/recycle-truck.png" alt="recycling illustration">
+        </div>
+    </section>
+
+    <!--mission and vision-->
+    <section class="mission reveal">
+        <h2>Our Mission</h2>
+        <p>
+            To promote efficient waste management by connecting citizens,companies,and local authorities using technology and innovation.
+        </p>
+        <h2>Our Vision</h2>
+        <p>
+            A cleaner, greener and smarter city where waste is managed sustainably and responsibly by all.
+        </p>
+    </section>
+
+    <!---our values-->
+    <section class="values reveal">
+        <h2>Our core values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <img src="images/battery-status.png" alt="Innovation icon">
+                <h3>Innovation</h3>
+                <p>we use technology to make waste collection smarter and more efficient.</p>
+            </div>
+
+            <div class="value-card">
+                <img src="images/factory.png" alt="Sustainability icon">
+                <h3>Sustainability</h3>
+                <p>we aim for long-term impact by promoting responsible waste habits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--team section-->
+    <section class="team reveal">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/health.jpg" alt="Team Member 1">
+                <h3>Kamukama Joram</h3>
+                <p>Project Manager</p>
+            </div>
+
+            <div class="team-member">
+
+                <img src="images/health.jpg" alt="Team Member 2">
+                <h4>Murungi Owen</h4>
+                <p>Lead  Developer</p>
+            </div>
+
+            <div class="team-member">
+                <img src="images/health.jpg" alt="team member 3">
+                <h4>Wasukira Ronnie</h4>
+                <p>Environmental Specialist</p>
+            </div>
+        </div>
+    </section>
+
+    <!--contact cta-->
+    <section class="contact-cta fade-in">
+        <h2>Join the Smartwaste Movement</h2>
+        <p>Be part of a cleaner,greener future today.</p>
+        <a href="signup.html" class="btn-primary">Get Started</a>
+    </section>
+
+    <footer>
+        <p>© 2025 SmartWaste. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu(){
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
